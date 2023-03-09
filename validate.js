@@ -9,7 +9,7 @@ function checkSID() {
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
+  if (isNaN(candi) || candi < 11) {
     return false;
   } else {
     return true;
@@ -17,12 +17,12 @@ function checkCandiNo() {
 }
 
 function validateForm(){
-	if(!checkSID()){
+	if(checkSID()){
 	  alert("Invalid value for Student ID!");
 	  document.getElementById("sid").focus();
 	  return false;
 	}else{
-		if(!checkCandiNo()){
+		if(checkCandiNo()){
 		  alert("Invalid value for Candidate No!!");
 		  document.getElementById("candi").focus();
 		  return false;

@@ -10,7 +10,7 @@ function checkSID() {
 }
 
 function checkCandiNo() {
-  let candi = (document.getElementById("candi").value).trim();
+  let candi = (number.getElementById("candi").value).trim();
   if (isNaN(candi) || candi < 1) {
     return false;
   } else {

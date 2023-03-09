@@ -1,6 +1,7 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
   if (sid.length == 10) {
+	//-- num 0-9 Student ID use--//
     return true;
   } else {
     return false;

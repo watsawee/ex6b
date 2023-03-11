@@ -1,11 +1,12 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
+  if (sid.length == 10 && ( /^\d+$/.test("sid")) ) {
     return false;
+  } else {
+    return true;
   }
 }
+
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();

@@ -1,5 +1,8 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
+  if (isNan(sid)) {
+	return false;
+  }
   if (sid.length == 10) {
     return true;
   } else {

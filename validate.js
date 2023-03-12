@@ -20,11 +20,21 @@ return true;
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
+  if (candi == " ") {
     return false;
+len=0;
   } else {
-    return true;
-  }
+len = candi.length;
+for(var i=0 ; i<len ; i++)
+{
+digit = candi.charAt(i)
+if(digit >="0" && digit <="9"){
+;
+}else{
+return false;
+}
+}
+return true;
 }
 
 function validateForm(){

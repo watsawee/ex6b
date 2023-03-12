@@ -1,10 +1,21 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
+  if (sid.length < 10) {
     return false;
+    len=0;
+  } else {
+    len = sid.length;
   }
+for(var i=0 ; i<len ; i++)
+{
+digit = sid.charAt(i)
+if(digit >="0" && digit <="9"){
+;
+}else{
+return false;
+}
+}
+return true;
 }
 
 function checkCandiNo() {

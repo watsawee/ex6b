@@ -1,18 +1,23 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10 && !NaN) {
-    return true;
+  if (sid.length != 10) {
+	return false;
+  } else if (isNaN(sid)) {
+	return false
   } else {
-    return false;
+	return true;
   }
+
 }
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
+  if (isNaN(candi)){
+    return false;
+  } else if (candi > 10) {
     return false;
   } else {
-    return true;
+	return true;
   }
 }
 

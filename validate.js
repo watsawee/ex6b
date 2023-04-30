@@ -10,8 +10,8 @@ function checkSID() {
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
-    return false;
+  if (isNaN(candi) || candi <= 10) {
+	  //แก้ไขเพิ่มเติมให้เป็นไปตามเงื่อนไขว่า รัหส Candidate จะต้องเป็นค่า 1-10 เท่านั้น
   } else {
     return true;
   }

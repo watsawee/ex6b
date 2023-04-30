@@ -1,6 +1,7 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
+  if (sid.length == 10 || isNaN(sid)) {
+	  //แก้ไขเพิ่มเติมให้เป็นไปตามเงื่อนไขที่ว่า รหัส นักศึกษาจะต้องเป็นตัวเลขเท่านั้น
     return true;
   } else {
     return false;

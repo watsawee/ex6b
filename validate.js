@@ -5,6 +5,11 @@ function checkSID() {
   } else {
     return false;
   }
+  if (isNaN(sid)) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function checkCandiNo() {

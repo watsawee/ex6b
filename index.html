@@ -12,40 +12,40 @@
 <h2>Student President Vote</h2>
 <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
-        <label for="title" class="form-label">Student ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="sid" name="sid"/>
+    <label for="sid" class="form-label">Student ID<span style="color:red">*</span></label>
+    <input type="text" class="form-control" id="sid" name="sid" required/>
     </div>
     <div class="mb-3 mt-3">
-        <label for="title" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
+    <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
+    <input type="text" class="form-control" id="fname" name="fname" required/>
     </div>
     <div class="mb-3 mt-3">
-        <label for="title" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
+    <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
+    <input type="text" class="form-control" id="lname" name="lname" required/>
     </div>
     <div class="mb-3 mt-3">
-        <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender1" name="optradio" value="1" checked>&nbsp; Male &nbsp;&nbsp;
-		<input type="radio" class="form-check-input" id="gender2" name="optradio" value="2">&nbsp; Female
+    <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
+    <input type="radio" class="form-check-input" id="gender1" name="optradio" value="1" checked />&nbsp; Male &nbsp;&nbsp;
+    <input type="radio" class="form-check-input" id="gender2" name="optradio" value="2" />&nbsp; Female
     </div>
     <div class="mb-3 mt-3">
-        <label for="school" class="form-label">School/Faculty<span style="color:red">*</span></label>
-        <select class="form-select" id="school" name="school">
-		  <option value="1">School of Science and Technology</option>
-		  <option value="2">School of Business</option>
-		  <option value="3">School of Humanities</option>
-		  <option value="4">International School of Management</option>
-		  <option value="5">School of Engineering</option>
-		  <option value="6">School of Communication Arts</option>
-		</select>
+    <label for="school" class="form-label">School/Faculty<span style="color:red">*</span></label>
+    <select class="form-select" id="school" name="school" required>
+    <option value="1">School of Science and Technology</option>
+    <option value="2">School of Business</option>
+    <option value="3">School of Humanities</option>
+    <option value="4">International School of Management</option>
+    <option value="5">School of Engineering</option>
+    <option value="6">School of Communication Arts</option>
+    </select>
     </div>
     <div class="mb-3 mt-3">
-        <label for="candi" class="form-label">Candidate No.<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="candi" name="candi"/>
+    <label for="candi" class="form-label">Candidate No.<span style="color:red">*</span></label>
+    <input type="text" class="form-control" id="candi" name="candi" required/>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="reset" class="btn btn-primary">Reset</button>
-</form><br><br>
+    </form><br><br>
 </div>
 </body>
 </html>

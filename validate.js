@@ -1,6 +1,6 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
+  if (!isNaN(sid) && sid.length == 10) {
     return true;
   } else {
     return false;
@@ -18,7 +18,7 @@ function checkCandiNo() {
 
 function validateForm(){
 	if(!checkSID()){
-	  alert("Invalid value for Student ID!");
+	  alert("Invalid value for Student ID! กรุณากรอกข้อมูลเป็นตัวเลข 0-9 จำนวน 10 หลัก");
 	  document.getElementById("sid").focus();
 	  return false;
 	}else{

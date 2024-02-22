@@ -9,7 +9,7 @@ function checkSID() {
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
+  if (isNaN(candi) || candi < 1 || candi > 10) {
     return false;
   } else {
     return true;
@@ -23,7 +23,7 @@ function validateForm(){
 	  return false;
 	}else{
 		if(!checkCandiNo()){
-		  alert("Invalid value for Candidate No!!");
+		  alert("Invalid value for Candidate No!! กรุณากรอกตัวเลขระหว่าง 1 ถึง 10 เท่านั้น");
 		  document.getElementById("candi").focus();
 		  return false;
 		}else{

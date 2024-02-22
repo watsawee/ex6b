@@ -1,6 +1,6 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
+  if (sid.length == 10 && sid >=0) {
     return true;
   } else {
     return false;
@@ -19,7 +19,7 @@ function checkCandiNo() {
 function validateForm(){
 	if(!checkSID()){
 	  alert("Invalid value for Student ID!");
-	  document.getElementById("sid").focus();
+	  document.getElementById("sid").id();
 	  return false;
 	}else{
 		if(!checkCandiNo()){

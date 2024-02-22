@@ -1,7 +1,9 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
   if (sid.length == 10 && sid >=0 ) {
-    return true; 
+    if (sid = /^[0-9]+$/){
+		return true ;
+	} else return false;
   } else {
     return false;
   }

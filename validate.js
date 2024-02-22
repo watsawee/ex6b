@@ -20,13 +20,15 @@ function checkSID() {
 
 
 function checkCandiNo() {
-  let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
-    return false;
-  } else {
-    return true;
-  }
+    let candi = parseInt(document.getElementById("candi").value.trim());
+    // ตรวจสอบว่า candi เป็นตัวเลขหรือไม่ และมีค่าอยู่ในช่วง 1 ถึง 10 หรือไม่
+    if (!isNaN(candi) && candi >= 1 && candi <= 10) {
+        return true;
+    } else {
+        return false;
+    }
 }
+
 
 function validateForm(){
 	if(!checkSID()){

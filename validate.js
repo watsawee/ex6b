@@ -1,11 +1,23 @@
 function checkSID() {
-  let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
-    return false;
-  }
+    let sid = (document.getElementById("sid").value).trim();
+
+    // เช็คความยาวของ SID ให้มีความยาว 10 ตัว
+    if (sid.length == 10) {
+        // ตรวจสอบว่าทุกตัวอยู่ในช่วง 0-9 หรือไม่
+        for (let i = 0; i < sid.length; i++) {
+            let digit = parseInt(sid[i]);
+            if (isNaN(digit) || digit < 0 || digit > 9) {
+                return false;
+            }
+        }
+        // ถ้าผ่านทุกเงื่อนไข แสดงว่าเป็น SID ที่ถูกต้อง
+        return true;
+    } else {
+        // ถ้าความยาวไม่เท่ากับ 10 ไม่ใช่ SID ที่ถูกต้อง
+        return false;
+    }
 }
+
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();

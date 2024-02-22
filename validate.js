@@ -6,7 +6,7 @@ function checkSID() {
     return false;
   }
 }
-
+//Commit ซ้ำครับ
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
   if (isNaN(candi) || candi > 10 || candi <= 0) {
